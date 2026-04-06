@@ -45,7 +45,17 @@ int main() {
 
 	a = 1;
 	b = 2;
-	printf("%d(a)/%d(b): %d \n",a,b,a/b);
+	(float)a;// 성형수술
+	printf("%d(a)/%d(b): %d \n", a, b, a / b);
+	printf("%d(a)/%d(b): %f \n",a,b,(float)a/b);
+
+	// 문자
+	char c1 = 'a';
+	printf("%c \n", c1);
+
+	// 문자열
+	char* c2 = "savdcbfg";
+	char c3[100] = "dfdsgfdf";
 
 	return 0;
 }
