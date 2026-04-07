@@ -50,7 +50,16 @@ int main() {
 	* 후위연산 := 이번줄 코드 끝나고 값 증가|감소 해
 	*/
 	c = ++a + 1 >> 1;
-	printf("c: %d \n",c);
-	printf("a: %d \n", a); 
+	//printf("c: %d \n",c);
+	//printf("a: %d \n", a); 
+
+	// long, int, short, char, float 이런걸 기본 자료형
+	/*
+	* 배열은 메모리에 연속된 공간을 차지해요
+	*/
+	int n1[3] = { 0,1,2 };
+	printf("n1: %p \n", n1);
+
+	
 	return 0;
 }
