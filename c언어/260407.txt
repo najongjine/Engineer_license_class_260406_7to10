@@ -4,17 +4,36 @@ int main() {
 	int a = 1;
 	a = a + 1;
 	a += 1;
-	printf("a: %d \n",++a);
-	printf("a: %d \n", -a);
+	//printf("a: %d \n",++a);
+	//printf("a: %d \n", -a);
 
 	a = 94346444;
 	int b = 2;
-	printf("a/b: %d \n", a / b);
+	//printf("a/b: %d \n", a / b);
 
 	// mod 연산은 절대 %3 이라고 했을시, 3보다 같거나 크게 나올수 없다
-	printf("a mod(3) : %d \n",a%5);
+	//printf("a mod(3) : %d \n",a%5);
 
 	a = 3;
-	a = a << 1;
+	b = a <= 1; // 아니 이건 거짓.
+	/*
+	* 옛날엔 컴퓨터 사양이 딸려서 참, 거짓을 표현할 스펙이 안됨
+	* 그래서 꼼수를 썼어요.
+	* 0 거짓
+	* 0 아니면 참
+	*/
+	//printf("b: %d \n", b);
+
+	b = a == 3;
+	b = a != 1;
+
+	a = 1;
+	b = 3;
+	int c = a & b;
+	//printf("c: %d \n", c);
+
+	a = 1;
+	b = 2;
+	c = a | b;
 	return 0;
 }
