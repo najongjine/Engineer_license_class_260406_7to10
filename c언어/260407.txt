@@ -49,8 +49,8 @@ int main() {
 	/*
 	* 후위연산 := 이번줄 코드 끝나고 값 증가|감소 해
 	*/
-	c = a++ + 1;
+	c = ++a + 1 >> 1;
 	printf("c: %d \n",c);
-	printf("a: %d \n", a);
+	printf("a: %d \n", a); 
 	return 0;
 }
