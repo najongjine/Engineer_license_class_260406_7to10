@@ -9,3 +9,19 @@ int main() {
     printf("%s \n", c2);
     return 0;
 }
+
+
+----------------
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    if (i) {
+        printf("참 이에요");
+    }
+    
+
+    return 0;
+}
