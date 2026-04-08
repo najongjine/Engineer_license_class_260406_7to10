@@ -4,6 +4,6 @@ int main() {
     //long, int, short, float, char
     int n1[] = { 9,8,2,3 };
     char c1[] = { 'a','b','c','\0' };
-
+    printf("%s \n", c1);
     return 0;
 }
