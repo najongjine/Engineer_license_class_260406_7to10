@@ -86,3 +86,18 @@ int main() {
     
     return 0;
 }
+
+
+----------------
+
+#include <stdio.h>
+
+int main() {
+    // 반복문 := 조건이 만족되는 동안만 반복수행 한다.
+    int i = 3;
+    while (i) {
+        printf("%d \n", i--);
+    }
+    printf("i:%d \n",i);
+    return 0;
+}
