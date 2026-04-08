@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    //long, int, short, float, char
+    int n1[] = { 9,8,2,3 };
+    char c1[] = { 'a','b','c','\0' };
+
+    return 0;
+}
