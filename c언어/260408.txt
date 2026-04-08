@@ -50,10 +50,10 @@ int main() {
 int main() {
     int i = 9;
     
-    if (i%3) {
+    if (i%3==0) {
         printf("홀수에요");
     }
-    else if (i%2) {
+    else if (i%2==0) {
         printf("짝수에요");
     }
     else {
