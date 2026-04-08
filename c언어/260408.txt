@@ -3,7 +3,9 @@
 int main() {
     //long, int, short, float, char
     int n1[] = { 9,8,2,3 };
-    char c1[] = { 'a','b','c','\0' };
+    char c1[] = { 'a','b','c','\0','d','e'};
+    char c2[] = "abc";
     printf("%s \n", c1);
+    printf("%s \n", c2);
     return 0;
 }
