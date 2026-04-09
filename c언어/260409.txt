@@ -25,3 +25,25 @@ int main() {
 
     return 0;
 }
+
+--------------
+
+#include <stdio.h>
+
+int main() {
+    // 반복문 := 조건이 만족되는 동안만 반복수행 한다.
+    int i = 3;
+    
+    switch (i) {
+        case 3:
+            printf("i= 3 \n");
+            break;
+        case 2:
+            printf("i= 2 \n");
+            break;
+        default:
+            printf("dunno");
+    }
+
+    return 0;
+}
