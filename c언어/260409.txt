@@ -158,11 +158,12 @@ void myf() {
     printf("i'm myf");
 }
 
+int myf2() {
+    int i = 2;
+    return i;
+}
 int main() {
-    printf("");
-    myf(); // 함수를 호출하면 몸체가 작동한다.
-    myf();
-    myf();
-    myf();
+    int i = 3;
+    printf(myf2());
     return 0;
 }
