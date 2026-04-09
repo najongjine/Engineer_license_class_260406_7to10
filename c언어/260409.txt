@@ -164,6 +164,6 @@ int myf2() {
 }
 int main() {
     int i = 3;
-    printf(myf2());
+    printf("%d \n",myf2());
     return 0;
 }
