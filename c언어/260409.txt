@@ -148,18 +148,21 @@ int main() {
 
 #include <stdio.h>
 
+/*
+void : 없다
+myf : 내가 짓고싶은 이름(함수 이름)
+() : 매개변수. parameter
+{ } : body. 몸체
+*/
+void myf() {
+    printf("i'm myf");
+}
+
 int main() {
-    int n1[3][2] = { {1,2} // [0][0],[0][1]
-                    ,{3,4}
-                    ,{5,6} };
-    // 내가 4을 보고싶다
-    n1[1][1];
-
-    for (int i = 0; i < 3; i++) { // 
-        for (int z = 0; z < 2; z++) {
-            printf("n1[%d][%d] = %d \n", i,z,n1[i][z]);
-        }
-    }
-
+    printf("");
+    myf(); // 함수를 호출하면 몸체가 작동한다.
+    myf();
+    myf();
+    myf();
     return 0;
 }
