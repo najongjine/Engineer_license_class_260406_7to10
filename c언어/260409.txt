@@ -160,7 +160,7 @@ void myf() {
 
 int myf2() {
     int i = 2;
-    return i;
+    return i; // 2 퉤 뱉고 기계 꺼짐
 }
 int main() {
     int i = 3;
