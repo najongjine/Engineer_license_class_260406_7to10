@@ -70,6 +70,21 @@ int main() {
     return 0;
 }
 
+---------------
+
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+    
+    do { // do-while := 일단 실행하고 조건 확인
+        printf("i:%d \n",i);
+        i++;
+    } while (i < 2);
+
+    return 0;
+}
+
 -----------------
 
 #include <stdio.h>
