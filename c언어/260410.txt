@@ -27,3 +27,22 @@ int main() {
     r1=myf4(1,'A');
     return 0;
 }
+
+----------------------
+
+#include <stdio.h>
+
+int str_length(char str1[]) {
+    int i = 0;
+    for (;1;i++) {
+        if (str1[i] == '\0') break;
+        i++;
+    }
+    return i;
+}
+int main() {
+    char str[] = "hello";
+    int length=str_length(str);
+    printf("length: %d \n",length);
+    return 0;
+}
