@@ -35,8 +35,8 @@ int main() {
 int str_length(char str1[]) {
     int i = 0;
     for (;1;i++) {
+        printf("%c \n",str1[i]);
         if (str1[i] == '\0') break;
-        i++;
     }
     return i;
 }
