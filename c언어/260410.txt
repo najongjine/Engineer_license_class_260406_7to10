@@ -21,6 +21,9 @@ int myf4(int i,char a) {
     return i + a;
 }
 int main() {
-   
+    myf();
+    int r1=myf2();
+    r1 = myf3(1);
+    r1=myf4(1,'A');
     return 0;
 }
