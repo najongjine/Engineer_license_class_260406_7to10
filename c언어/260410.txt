@@ -117,15 +117,20 @@ int main() {
 
 int main() {
     int a = 1;
-    int* pa =&a;
+    int * pa =&a;
 
     int n1[] = { 3 };
     int* pn1 = n1;
-    printf("a 의 주소: %d \n", &a);
-    printf("pa 가 가진 주소: %d \n", pa);
+    printf("pa  가 가진 주소: %p \n", pa);
+    printf("pa 가 가진 주소의 원산지 값: %d \n", *pa);
 
-    printf("배열의 주소: %d \n", n1);
-    printf("pn1 가 가진 주소: %d \n", pn1);
+    /*
+    * C 언어의 잘못된 설계
+    *   * 를 곱하기 할때도 쓰고 (데이터 * 데이터)
+    * 포인터 타입 선언할때도 쓰고 (int * a =)
+    * 원산지 찾아갈때도 씁니다(*a)
+    */
+    
 
     return 0;
 }
