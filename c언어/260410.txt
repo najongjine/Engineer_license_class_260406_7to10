@@ -46,3 +46,33 @@ int main() {
     printf("length: %d \n",length);
     return 0;
 }
+
+
+---------------------
+
+#include <stdio.h>
+
+
+void insertionSort(int a[], int n) {
+    int i, j, key;
+    for (i = 1; i < n; i++) {
+        key = a[i];
+        for (j = i - 1; j >= 0 && a[j] > key; j--) {
+            a[j + 1] = a[j];
+        }
+        a[j + 1] = key;
+    }
+}
+
+int main() {
+    int a[5] = { 8, 5, 6, 2, 4 };
+    int i;
+
+    insertionSort(a, 5);
+
+    for (i = 0; i < 5; i++) {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
