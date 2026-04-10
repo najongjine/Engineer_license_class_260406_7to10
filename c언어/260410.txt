@@ -109,3 +109,17 @@ int main() {
 
     return 0;
 }
+
+---------------------------
+
+#include <stdio.h>
+
+
+int main() {
+    int a = 1;
+    int* pa =&a;
+    printf("a 의 주소: %d \n", &a);
+    printf("pa 가 가진 주소: %d \n", pa);
+
+    return 0;
+}
