@@ -99,3 +99,25 @@ int main() {
     
     return 0;
 }
+
+=======================
+
+#include <stdio.h>
+
+int main() {
+    
+    typedef struct {
+        char* name;
+        int money;
+        char* phone;
+    }Bank;
+    
+    Bank s1[3] = {
+        {"pepe", 5000, "010111"},
+        {"momo", 7000, "010222"},
+        {"nana", 9000, "010333"}
+    };
+
+    
+    return 0;
+}
