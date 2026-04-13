@@ -45,3 +45,44 @@ int main() {
 
     return 0;
 }
+
+
+===================================
+
+#include <stdio.h>
+
+int main() {
+    /* 호랑이 담배피던 시절 
+    * int name[100];
+    * char* phone[100];
+    * int money[100];
+    * 
+    * name[0]; <- 페페
+    * phone[0];
+    * bubbleSort(money);
+    * money[0];
+    * 
+    * 프로그래밍 초창기때는 이렇게 하면 어떤사람이 어떤데이터를 가지고 있는지
+    * 보장이 안되요. 정렬 한번 때리면 그냥 초토화 되는거에요
+    * 
+    * 그래서 이런 제안을 해요.
+    * 
+    * 관련있는건 싸맵시다.
+   struct Bank {
+    char* name;
+    int money;
+    char* phone;
+   };
+    */
+    struct Bank {
+        char* name;
+        int money;
+        char* phone;
+    };
+    struct Bank s1;
+    s1.name = "pepe";
+    s1.money = 5000;
+    s1.phone = "010111";
+    
+    return 0;
+}
