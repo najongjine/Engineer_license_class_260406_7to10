@@ -5,5 +5,43 @@ int main() {
     puts("puts...%d",10);//문장만 출력. 다음줄 개행 자동으로 함.
     printf("printf... %d \n",10); // 가장흔히 씀. 다음줄 개행 수동으로 해줘야함
 
+    /*
+    * malloc은 동적 메모리 할당
+    * int *p;
+      p = (int *)malloc(sizeof(int));
+    */
+
+   
+    int test1;
+    int* p;
+
+    /* malloc: Heap 메모리 공간에 메모리 동적으로 할당해라. 
+    그 Heap메모리에 할당한 주소를 p에 저장해라*/
+    p = (int*)malloc(sizeof(int));   
+    // p의 원산지 찾아가서 거기에 100을 저장해라
+    *p = 100;
+
+    printf("%d\n", *p);
+
+    free(p);   // 사용 끝나면 해제. 이거 시험에선 의미 없는 코드
+
+    int test[5]; // 밑에 예제는 이거랑 동급
+    int* arr;
+    int i;
+    /* Heap 메모리 공간에 malloc으로 동적 공간 할당 하는데, int 사이즈만큼
+    5개 연속으로 만들어라.
+    이러면 배열이랑 완전 똑같음 */
+    arr = (int*)malloc(sizeof(int) * 5);  // int 5개 공간 할당
+
+    for (i = 0; i < 5; i++) {
+        arr[i] = (i + 1) * 10;
+    }
+
+    for (i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
+    }
+
+    free(arr);
+
     return 0;
 }
