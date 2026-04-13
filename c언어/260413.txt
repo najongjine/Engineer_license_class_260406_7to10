@@ -82,11 +82,16 @@ int main() {
         int money;
         char* phone;
     } ;
-    //Bank s1;
+    
     struct Bank s1;
     s1.name = "pepe";
     s1.money = 5000;
     s1.phone = "010111";
+
+    struct Bank s2; // s1 이랑 s2는 완전 다른 놈이에요
+    s2.name = "speaky";
+    s2.money = 6000;
+    s2.phone = "010222";
     
     printf("s1.name : %s \n", s1.name);
     printf("s1.money : %d \n", s1.money);
