@@ -6,7 +6,7 @@ typedef struct {
     int score;
 } Student;
 
-void changeScore(Student *s, int value) {
+void changeScore(Student* s, int value) {
     s->score += value;
 }
 
@@ -16,13 +16,13 @@ int main() {
         {"Lee", 90}
     };
 
-    Student *p = arr;
+    Student* p = arr;
     int i;
     int sum = 0;
 
-    strcpy((p + 1)->name, "Park");
+    strcpy_s((p + 1)->name, sizeof((p + 1)->name), "Park");
 
-    for(i = 0; i < 2; i++) {
+    for (i = 0; i < 2; i++) {
         changeScore(&arr[i], 5);
         sum += arr[i].score;
     }
