@@ -177,3 +177,31 @@ int main() {
 
     return 0;
 }
+
+=================
+
+#include <stdio.h>
+#include <string.h>
+
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
+
+int main() {
+    // 트리구조 예제
+    struct Node n1 = { 1, NULL, NULL };
+    struct Node n2 = { 2, NULL, NULL };
+    struct Node n3 = { 3, NULL, NULL };
+
+    n1.left = &n2;// 주소 주는거임
+    n1.right = &n3;
+
+    printf("root: %d\n", n1.data);
+    printf("left: %d\n", n1.left->data);
+    printf("right: %d\n", n1.right->data);
+
+
+    return 0;
+}
