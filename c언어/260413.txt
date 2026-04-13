@@ -155,3 +155,25 @@ int main() {
 
     return 0;
 }
+
+======================
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char name[20];
+    int age;
+    
+} Person;
+
+int main() {
+    Person p1 = {"pepe",20};
+    Person* pp1 = &p1;
+    printf("%d \n", p1.age);
+    // struct을 포인터로 했을땐 -> 기호로 속성에 파고들어야 한다
+    printf("%d \n", pp1->age);
+   
+
+    return 0;
+}
