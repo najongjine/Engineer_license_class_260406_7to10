@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char name[20];
+    int score;
+} Student;
+
+void changeScore(Student *s, int value) {
+    s->score += value;
+}
+
+int main() {
+    Student arr[2] = {
+        {"Kim", 80},
+        {"Lee", 90}
+    };
+
+    Student *p = arr;
+    int i;
+    int sum = 0;
+
+    strcpy((p + 1)->name, "Park");
+
+    for(i = 0; i < 2; i++) {
+        changeScore(&arr[i], 5);
+        sum += arr[i].score;
+    }
+
+    printf("%s %d\n", arr[0].name, arr[0].score);
+    printf("%s %d\n", arr[1].name, arr[1].score);
+    printf("%d\n", sum);
+
+    return 0;
+}
