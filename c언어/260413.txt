@@ -48,7 +48,6 @@ int main() {
 
 
 ===================================
-
 #include <stdio.h>
 
 int main() {
@@ -73,16 +72,25 @@ int main() {
     int money;
     char* phone;
    };
+
+   struct는 heap 메모리에 공간 만들고 시작주소 저장하는 포인터 방식이 아니라,
+   그냥 main 메모리 같은곳에 걍 데이터 뭉탱이 싸매서 만든다.
+   즉, 포인터 아니다
     */
     struct Bank {
         char* name;
         int money;
         char* phone;
-    };
+    } ;
+    //Bank s1;
     struct Bank s1;
     s1.name = "pepe";
     s1.money = 5000;
     s1.phone = "010111";
+    
+    printf("s1.name : %s \n", s1.name);
+    printf("s1.money : %d \n", s1.money);
+    printf("s1.phone : %s \n", s1.phone);
     
     return 0;
 }
