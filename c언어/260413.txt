@@ -121,3 +121,37 @@ int main() {
     
     return 0;
 }
+
+
+=========================
+
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    char city[20];
+    char phone[20];
+} Address;
+
+typedef struct {
+    char name[20];
+    int age;
+    Address addr;   // 구조체 안에 구조체
+} Person;
+
+int main() {
+    Person p1;
+
+    strcpy(p1.name, "Kim");
+    p1.age = 25;
+
+    strcpy(p1.addr.city, "Seoul");
+    strcpy(p1.addr.phone, "010-1234");
+
+    printf("이름: %s\n", p1.name);
+    printf("나이: %d\n", p1.age);
+    printf("도시: %s\n", p1.addr.city);
+    printf("전화: %s\n", p1.addr.phone);
+
+    return 0;
+}
