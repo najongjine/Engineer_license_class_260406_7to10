@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main() {
+    putchar('c'); // 문자만 출력. 다음줄 개행 자동으로 안함.
+    puts("puts...%d",10);//문장만 출력. 다음줄 개행 자동으로 함.
+    printf("printf... %d \n",10); // 가장흔히 씀. 다음줄 개행 수동으로 해줘야함
+
+    return 0;
+}
