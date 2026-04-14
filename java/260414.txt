@@ -26,9 +26,43 @@ public class Test2604 {
 		Bank b1=new Bank(); // java pointer 혈통
 		int[] nums = new int[3]; // java pointer 혈통
 		List<String> names = new ArrayList(); // java pointer 혈통
-		 
+		
+		b1.name= "pepe";
+		b1.money=500;
 		System.out.println("b1: "+b1);
-
+		System.out.println("b1의 이름 : "+b1.name);
+		System.out.println("b1의 money : "+b1.money);
+		
+		if(true) {
+			System.out.println("참이에요");
+		}
+		else if(true) {
+			
+		}
+		else {
+			
+		}
+		
+		int a=3;
+		switch(a) {
+		case 3:
+			System.out.println("3이다");
+			break;
+		default:
+			System.out.println("몰라");
+		}
+		
+		while(a-->0) {
+			System.out.println("반복해요"+a);
+		}
+		do {
+			System.out.println("dowhile 은 어쨋든 한번은 실행");
+		}while(a>0);
+		
+		for(int i=0;i<3;i++) {
+			System.out.println("forloop i:"+i);
+		}
+		
 	}
 
 }
