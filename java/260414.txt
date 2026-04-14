@@ -1,5 +1,8 @@
 package test2604;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Bank{
    String name;
    int money;
@@ -18,7 +21,12 @@ class Bank{
 
 public class Test2604 {
 	public static void main(String[] args) {
-		Bank b1=new Bank();
+		
+		// java 에서 클래스를 사용하는 가장 흔한 예시
+		Bank b1=new Bank(); // java pointer 혈통
+		int[] nums = new int[3]; // java pointer 혈통
+		List<String> names = new ArrayList(); // java pointer 혈통
+		 
 		System.out.println("b1: "+b1);
 
 	}
