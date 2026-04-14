@@ -1,23 +1,24 @@
-/*
-struct 뉍두고 굳이 class 만든 이유 -
-데이터와 기능을 함께 묶을수 있다
-*/
-class Dog(){
-    int leg=4;
-    boolean fur=true;
-    int eye;
-    boolean nose;
-    
-    void run(){
-        System.out.println("달린다!!");
-    }
+package test2604;
+
+class Bank{
+   String name;
+   int money;
+   
+   int mymoney(){
+       return money;
+   }
+   void 수취(int money){
+       this.money+=money;
+   }
+   void 송금(int money){
+       this.money-=money;
+   }
 }
 
-class Main {
-    public static void main(String[] args) {
-        // 가장 기본적인 사용 예시
-        Dog dog=new Dog();
-        dog.leg;
-        dog.run();
-    }
+public class Test2604 {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
 }
