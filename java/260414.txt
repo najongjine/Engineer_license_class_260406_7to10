@@ -66,3 +66,56 @@ public class Test2604 {
 	}
 
 }
+
+
+===============================
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/*
+ * 태초 자바가 처음 나왔을때는 아주 쉽고 간편했는데...
+ * 사람들이 모여들고 훈수러들이 끼어들면서 전쟁과 광기 시작됩니다....
+ * 
+ *  은닉화
+  */
+class Bank{
+   String name;
+   private int money;
+   
+   /* 생성자-
+    * 객체가 생성될때 호출되는놈
+    * 만약, 생성자를 아무것도 안적어줬으면
+    * Bank(){} 이런 껍대기 생성자를 컴파일때 자동으로 넣어버려요
+    * */
+   Bank(){}
+   /* 메소드 오버로딩-
+    * 똑같은 이름의 함수가 존재하면, 매개변수 틀린거로 서로를 구분함 */
+   Bank(String name, int money){
+	   this.name=name; // this:= 자기 자신 클래스를 뜻함
+	   this.money=money;
+   }
+   
+   int mymoney(){
+       return money;
+   }
+   void 수취(int money){
+       this.money+=money;
+   }
+   void 송금(int money){
+       this.money-=money;
+   }
+}
+
+// 다음 코드에서 에러가 나는 행은?
+public class Test2604 {
+	public static void main(String[] args) {
+		Bank bank1=new Bank();
+		Bank bank2=new Bank("pepe",500);
+		
+		
+	}
+
+}
