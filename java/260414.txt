@@ -1,0 +1,23 @@
+/*
+struct 뉍두고 굳이 class 만든 이유 -
+데이터와 기능을 함께 묶을수 있다
+*/
+class Dog(){
+    int leg=4;
+    boolean fur=true;
+    int eye;
+    boolean nose;
+    
+    void run(){
+        System.out.println("달린다!!");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        // 가장 기본적인 사용 예시
+        Dog dog=new Dog();
+        dog.leg;
+        dog.run();
+    }
+}
