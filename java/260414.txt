@@ -83,7 +83,7 @@ import java.util.List;
   */
 class Bank{
    String name;
-   private int money;
+   int money;
    
    /* 생성자-
     * 객체가 생성될때 호출되는놈
@@ -113,9 +113,15 @@ class Bank{
 public class Test2604 {
 	public static void main(String[] args) {
 		Bank bank1=new Bank();
+		bank1.name="momo";
+		bank1.money=600;
 		Bank bank2=new Bank("pepe",500);
-		
-		
+		//printf("bank1.name: %d \n",bank1.name);
+		// 자바에서 문자열 + 데이터는 무조건 문자열로 바꿔 버립니다.
+		System.out.println("bank1.name :"+bank1.name);
+		System.out.println("bank2.name :"+bank2.name);
+		bank1.수취(100);
+		System.out.println("bank1.money:"+bank1.money);
 	}
 
 }
