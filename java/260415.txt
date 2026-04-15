@@ -9,7 +9,6 @@ class Animal{
 	int leg=4;
 }
 
-// 다음 코드에서 에러가 나는 행은?
 public class Test2604 {
 	public static void main(String[] args) {
 		Animal animal=new Animal();
