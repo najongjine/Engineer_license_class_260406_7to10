@@ -3,7 +3,12 @@ package test2604;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/*
+ * static 영역. 신의 영역.
+ * 인간이 존재하기전에 신들이 존재한다는 우스게소리 비슷함.
+ * 
+ * static 속성과 method는 프로그램 시작전에 반드시 존재한다.
+ * */
 class Animal{
 	static int eye=2;
 	int leg=4;
@@ -12,7 +17,12 @@ class Animal{
 public class Test2604 {
 	public static void main(String[] args) {
 		Animal animal=new Animal();
-		//Animal.
+		animal.leg=2;
+		Animal animal2=new Animal();
+		animal2.eye=1;
+		
+		System.out.println("animal leg: "+animal.leg +", eye: "+animal.eye);
+		System.out.println("animal2 leg: "+animal2.leg +", eye: "+animal2.eye);
 		
 	}
 
