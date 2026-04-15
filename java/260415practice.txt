@@ -15,7 +15,7 @@ class Child extends Parent {
     int x = 200;
 
     void show() {
-        System.out.print("C");
+        System.out.print("C"+x);
     }
 }
 
