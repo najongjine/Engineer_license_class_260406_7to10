@@ -27,3 +27,42 @@ public class Test2604 {
 	}
 
 }
+
+
+=================================
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Parent {
+    int a = 10;
+
+    int get() {
+        return a;
+    }
+}
+
+class Child extends Parent {
+    int a = 20;
+
+    int get() {
+        return a;
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Parent p2=new Parent();
+		Child c2 = new Child();
+		Parent p = new Child();
+        System.out.print(p.a + " ");
+        System.out.print(p.get());
+        System.out.print(p2.a + " ");
+        System.out.print(p2.get());
+        System.out.print(c2.a + " ");
+        System.out.print(c2.get());
+	}
+
+}
