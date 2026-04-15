@@ -79,14 +79,16 @@ public class Test2604 {
 
 =======================
 
+
 package test2604;
 
 import java.util.ArrayList;
 import java.util.List;
 
 class Parent {
+	static int a=1;
     static void show() {
-        System.out.println("Parent static");
+        System.out.println("Parent static"+a);
     }
 
     void print() {
@@ -95,8 +97,9 @@ class Parent {
 }
 
 class Child extends Parent {
+	static int a=1;
     static void show() {
-        System.out.println("Child static");
+        System.out.println("Child static"+a);
     }
 
     @Override
@@ -113,3 +116,4 @@ public class Test2604 {
         p.print();  // instance
 	}
 }
+
