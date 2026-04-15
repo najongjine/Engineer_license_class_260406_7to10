@@ -1,0 +1,29 @@
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Parent {
+    int x = 100;
+
+    void show() {
+        System.out.print("P");
+    }
+}
+
+class Child extends Parent {
+    int x = 200;
+
+    void show() {
+        System.out.print("C");
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Parent p = new Child();
+        System.out.print(p.x);
+        p.show();
+	}
+
+}
