@@ -76,3 +76,40 @@ public class Test2604 {
 	}
 
 }
+
+=======================
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Parent {
+    static void show() {
+        System.out.println("Parent static");
+    }
+
+    void print() {
+        System.out.println("Parent instance");
+    }
+}
+
+class Child extends Parent {
+    static void show() {
+        System.out.println("Child static");
+    }
+
+    @Override
+    void print() {
+        System.out.println("Child instance");
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Parent p = new Child();
+
+        p.show();   // static
+        p.print();  // instance
+	}
+}
