@@ -1,0 +1,20 @@
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+class Animal{
+	static int eye=2;
+	int leg=4;
+}
+
+// 다음 코드에서 에러가 나는 행은?
+public class Test2604 {
+	public static void main(String[] args) {
+		Animal animal=new Animal();
+		//Animal.
+		
+	}
+
+}
