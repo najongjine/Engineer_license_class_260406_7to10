@@ -27,3 +27,34 @@ public class Test2604 {
 	}
 
 }
+
+
+===========================
+
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Animal {
+	int 다리=4;
+	void 공격() {
+		System.out.println("으르렁");
+	}
+}
+class Dog extends Animal {
+	int eye=2;
+	void 달리기() {
+		System.out.println("달린다");
+	}
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Animal animal=new Animal();
+		Dog dog=new Dog();
+		
+	}
+
+}
