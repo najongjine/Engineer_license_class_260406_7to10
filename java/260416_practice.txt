@@ -1,0 +1,57 @@
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class A {
+    int x = 10;
+
+    A() {
+        System.out.print("A()");
+        print();
+    }
+
+    void print() {
+        System.out.print("A.print ");
+    }
+}
+
+class B extends A {
+    int x = 20;
+
+    B() {
+        this(5);
+        System.out.print("B() ");
+    }
+
+    B(int x) {
+        super();
+        this.x = x;
+        System.out.print("B(int) ");
+    }
+
+    @Override
+    void print() {
+        System.out.print("B.print " + x + " ");
+    }
+}
+class C extends B {
+    int x = 30;
+
+    C() {
+        super(7);
+        System.out.print("C() ");
+    }
+
+    @Override
+    void print() {
+        System.out.print("C.print " + x + " ");
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		A obj = new C();
+        obj.print();
+	}
+}
