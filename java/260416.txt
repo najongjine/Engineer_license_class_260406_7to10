@@ -94,3 +94,50 @@ public class Test2604 {
 		Shape shape=new Circle();
 	}
 }
+
+
+===============
+
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+/*
+ * 인터페이스 - 청사진. 클래스의 설계도
+ * 디자인 패턴을 위해서 나온놈
+ * 요놈을 좀 어렵게 사용하면 다형성도 된다.
+ * */
+interface Animal{
+	void move();
+	void eat();
+}
+interface Animal2{
+	void move();
+	void eat();
+}
+class OldDog{
+	int u=3;
+}
+/*
+ * 인터페이스는 여러개 상속 받을수 있다.
+ * 인퍼테이스에 선언된 method는 반드시 상세구현 해줘야 된다
+ * */
+class Dog extends OldDog implements Animal,Animal2{
+	int a=2;
+	public void move() {
+		System.out.println("달려요");
+	}
+	public void eat() {
+		System.out.println("먹어요");
+	}
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Animal dog1=new Dog();
+		Animal dog2=new Dog();
+		dog1.eat();
+		dog2.move();
+	}
+}
