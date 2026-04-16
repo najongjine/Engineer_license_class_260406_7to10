@@ -174,3 +174,31 @@ public class Test2604 {
 	}
 }
 
+===================
+
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class Test2604 {
+	public static void main(String[] args) {
+		int a=1;
+		int b=0;
+		
+		try {
+			//throw new Exception(); // 일부러 에러 터트리는 코드
+			/* 런타임 에러가 터지면 무조건 catch로 빠진다. 다시 try 안으로 되돌아오는거 아님 */
+			System.out.println(a/b); 
+			System.out.println("난 멀쩡해");
+			System.out.println("난 멀쩡해 ㅎㅎ");
+		}catch(Exception e) {
+			System.out.println("sdsdsds"+e.getMessage());
+		}
+		
+
+	}
+}
