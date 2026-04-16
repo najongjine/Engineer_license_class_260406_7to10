@@ -141,3 +141,36 @@ public class Test2604 {
 		dog2.move();
 	}
 }
+
+=================
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+interface Vehicle {
+    void run();
+}
+
+class Bus implements Vehicle {
+    public void run() {
+        System.out.println("버스출발 ");
+    }
+}
+
+class Taxi implements Vehicle {
+    public void run() {
+        System.out.println("택시출발 ");
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		 Vehicle[] arr = { new Bus(), new Taxi() };
+        for(Vehicle v : arr) {
+            v.run();
+        }
+	}
+}
+
