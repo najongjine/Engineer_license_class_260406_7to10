@@ -22,3 +22,36 @@ public class Test2604 {
 		B b=new B();
 	}
 }
+
+
+=========================
+
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class A{
+	A(int a){
+		System.out.println("A탄생");
+	}
+	void end() {
+		System.out.println("끝");
+	}
+}
+class B extends A{
+	/* 자바 상속관계에서 기본으로 부모의 기본 생성자를 호출하려 한다
+	 * 그런데, A() 이런 기본 생성자가 없으면, 우리가 수동으로 부모 생성자를 호출해야 한다.
+	 * */
+	B(){
+		super(1);
+		System.out.println("B탄생");
+	}
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		B b=new B();
+	}
+}
