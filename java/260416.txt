@@ -55,3 +55,42 @@ public class Test2604 {
 		B b=new B();
 	}
 }
+
+
+=============================
+
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+/* abstract (추상클래스).
+ * 인터페이스 나오기 전에 쓰던거
+ * 
+ * 꼭 만들다 만것처럼 생김
+ * 몸체가 없는 abstract 함수도 선언할수 있고,
+ * 몸체가 있는 함수도 선언할수 있다.
+ * 데이터도 선언할수 있다.
+ * 
+ * 단, abstract class 단독으로는 new 할수 없다.
+ * 꼭 상속받아서 사용 해야 한다.
+ * */
+abstract class Shape{
+	int a=2;
+	abstract void draw();
+	void color(String color) {
+		System.out.println(color + "색이에요");
+	}
+}
+class Circle extends Shape{
+	void draw() {
+		System.out.println("동그라미");
+	}
+}
+
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Shape shape=new Circle();
+	}
+}
