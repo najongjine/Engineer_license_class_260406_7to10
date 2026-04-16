@@ -26,6 +26,15 @@ class Child2 extends Child {
 
 public class Test2604 {
 	public static void main(String[] args) {
+		/*
+		 * 생성자 호출은 stack에 쌓는 스타일로 해야함.
+		 * 
+		 * |Parent()|
+		 * |Child(1)|
+		 * |Child2()|
+		 * 
+		 * 생성자를 stack에 일단 쌓아놓고, 위에서부터 하나씩 꺼내서 호출 해야함.
+		 * */
 		Parent p = new Child2();
 	}
 }
