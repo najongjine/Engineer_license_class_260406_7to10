@@ -1,0 +1,24 @@
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class A{
+	A(){
+		System.out.println("A탄생");
+	}
+	void end() {
+		System.out.println("끝");
+	}
+}
+class B{
+	B(){
+		System.out.println("B탄생");
+	}
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		B b=new B();
+	}
+}
