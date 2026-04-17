@@ -23,3 +23,25 @@ public class Test2604 {
 
 	}
 }
+
+
+============================
+// thread 2번째 스타일 코드
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+// 361
+class Box implements Runnable{
+	public void run() {
+		System.out.println("msg");
+	}
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		Thread t= new Thread(new Box());
+		t.start();
+
+	}
+}
