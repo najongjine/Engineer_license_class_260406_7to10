@@ -45,3 +45,54 @@ public class Test2604 {
 
 	}
 }
+
+===================
+
+package test2604;
+
+import java.util.ArrayList;
+import java.util.List;
+// 361
+class A{
+	public int a=2;
+	void change(String _s) {
+		_s="바뀜";
+	}
+	void change(A _a) {
+		_a.a= -1;
+	}
+}
+public class Test2604 {
+	public static void main(String[] args) {
+		A a = new A(); // 주소저장.
+		System.out.println(a);
+		String str1="hi"; // String 타입은 주소랑 원산지 바로 찾아가기 기능을 같이 저장한다.
+		a.change(str1); // 자료결합도.
+		a.change(a); // stamp 결합도
+		System.out.println(str1);
+		System.out.println(a.a);
+		String str2="hi";
+		String str3=new String("hi");
+		
+		System.out.println(str1);
+		
+		if(str1==str2) {
+			System.out.println("str1==str2 같아요");
+		}else {
+			System.out.println("str1!=str2 틀려요");
+		}
+		if(str1==str3) {
+			System.out.println("str1==str3 같아요");
+		}else {
+			System.out.println("str1!=str3 틀려요");
+		}
+		if(str1.equals(str3)) {
+			System.out.println("str1==str3 같아요");
+		}
+		else {
+			System.out.println("str1!=str3 틀려요");
+		}
+		
+
+	}
+}
