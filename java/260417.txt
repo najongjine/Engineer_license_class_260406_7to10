@@ -2,7 +2,7 @@ package test2604;
 
 import java.util.ArrayList;
 import java.util.List;
-// 361
+// pg 361
 class Box extends Thread{
 	public void run() {
 		System.out.println("msg");
@@ -12,6 +12,13 @@ class Box extends Thread{
 public class Test2604 {
 	public static void main(String[] args) {
 		Box b= new Box();
+		/*
+		run() 실행 안했다고 당황하지 마세요. Thread를 상속 받았으면
+		run() method를 내부에 무조건 만들어 줘야하고,
+		실행은 start()로 해야합니다.
+		그래서 start() 라는 메소드 만든적 없는데 어찌된 일이지? 
+		하지 마세요
+		*/
 		b.start();
 
 	}
