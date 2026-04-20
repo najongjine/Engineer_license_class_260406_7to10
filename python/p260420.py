@@ -63,4 +63,17 @@ s=[1,1,2,2,3,3,3]
 s.reverse() #!! 배열을 뒤집는다.
 #sort() : 배열을 정렬한다.
 #sorted(s) : 배열을 정렬한다.
-print(s)
+#print(s)
+
+
+#####list comprehension#####
+"""
+a=[1,2]
+for i in a:
+    print(i)
+for i in range(3):
+    print(a[i])
+"""
+
+a=[x for x in range(3)]
+print(a)
