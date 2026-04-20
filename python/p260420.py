@@ -33,3 +33,7 @@ k=['a','b']
 c=['c','d']
 a=[k,c]
 print(a)
+
+######indexing######
+s="hello"
+print(s[-5]) # == s[0] 이랑 같아요. python은 내림차순으로 index 첨자도 가능해요
