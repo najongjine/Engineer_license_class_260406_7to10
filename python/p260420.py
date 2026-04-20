@@ -87,4 +87,7 @@ a=[x for x in range(3)]
 # 2 을 꺼내서 'for 2 in' 에 넣고 검사 함.
 # 아무런 문제 없으면 2 for 여기에 최종 출하
 # [0,1,2]
-print(a)
+#print(a)
+
+a=[1,2,3]
+s=[x*x for x in a]
