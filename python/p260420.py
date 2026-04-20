@@ -90,4 +90,13 @@ a=[x for x in range(3)]
 #print(a)
 
 a=[1,2,3]
-s=[x*x for x in a]
+s=[x*x for x in [1,2,3]]
+
+a=[1,2,3]
+#  4       2    1     3
+s=[x+1 for x in a if x%2==0]
+
+nums = [10, 20, 30, 40, 50]
+#           4            2     1      3
+result = [nums.pop() for x in nums if x>20]
+print(result)
