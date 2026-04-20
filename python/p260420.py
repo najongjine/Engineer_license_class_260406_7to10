@@ -18,12 +18,18 @@ for num in numbers:
 #######################################
 text = "banana"
 
-count_dict = {}
+count_dict = {} # {'b':1, 'a':3, 'n':2}
 
-for ch in text:
-    if ch in count_dict:
-        count_dict[ch] += 1
+for ch in text: # n
+    if ch in count_dict: # n 가 count_dict 안에 있니
+        count_dict[ch] += 1 # count_dict['n'] = count_dict['n'] + 1
     else:
-        count_dict[ch] = 1
+        count_dict[ch] = 1 
 
 print(count_dict)
+
+####################
+k=['a','b']
+c=['c','d']
+a=[k,c]
+print(a)
