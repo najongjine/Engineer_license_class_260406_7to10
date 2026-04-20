@@ -26,14 +26,18 @@ for ch in text: # n
     else:
         count_dict[ch] = 1 
 
-print(count_dict)
+#print(count_dict)
 
 ####################
 k=['a','b']
 c=['c','d']
 a=[k,c]
-print(a)
+#print(a)
 
 ######indexing######
 s="hello"
-print(s[-5]) # == s[0] 이랑 같아요. python은 내림차순으로 index 첨자도 가능해요
+#print(s[-5]) # == s[0] 이랑 같아요. python은 내림차순으로 index 첨자도 가능해요
+#print(s[1:3]) # 1번째부터 3번째 전까지 출력해요. 즉 1번째랑 2번째만 출력해요.
+
+#s[start:end:step] step =2 면 2칸씩 건너뛰면서 출력해요.
+#print(s[0:5:2]) # hlo
