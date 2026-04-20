@@ -99,4 +99,5 @@ s=[x+1 for x in a if x%2==0]
 nums = [10, 20, 30, 40, 50]
 #           4            2     1      3
 result = [nums.pop() for x in nums if x>20]
+print(nums)
 print(result)
