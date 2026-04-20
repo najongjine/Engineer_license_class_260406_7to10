@@ -41,3 +41,7 @@ s="hello"
 
 #s[start:end:step] step =2 면 2칸씩 건너뛰면서 출력해요.
 #print(s[0:5:2]) # hlo
+
+s=[1,2,3,4,5,6,7,8,9]
+#print(s[-5:-1:3]) # [5,8]
+print(s[:])
