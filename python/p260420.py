@@ -6,10 +6,24 @@ dic1={'name':'John', 'age':30, 'city':'New York'}
 ####################
 
 numbers = [1, 2, 3, 4, 5]
+numbers[1]=1*1
 
-result = {}
-
+result = {} # {1:1}
+#   1
 for num in numbers:
+    # result[1]= 1*1
     result[num] = num * num
 
-print(result)
+#print(result)
+#######################################
+text = "banana"
+
+count_dict = {}
+
+for ch in text:
+    if ch in count_dict:
+        count_dict[ch] += 1
+    else:
+        count_dict[ch] = 1
+
+print(count_dict)
