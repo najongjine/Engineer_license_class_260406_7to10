@@ -70,3 +70,15 @@ p=[Person(i,"hi"+str(i)) for i in range(3)]
 #p=[Person(0,"hi1"),Person(1,"hi2"),Person(2,"hi3")]
 p[0].change(p[1])
 print(p[1].a)
+
+
+#### 람다######
+add = lambda x, y: x + y
+print(add(3, 5))   # 8
+
+square = lambda x: x * x
+print(square(4))   # 16
+
+nums = [1, 2, 3, 4]
+result = list(map(lambda x: x * 2, nums))
+print(result)   # [2, 4, 6, 8]
