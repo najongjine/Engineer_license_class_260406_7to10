@@ -33,8 +33,12 @@ def add(a,b):
 
 #print(add(1,2)) #3
 
+"""
+python은 default 매개변수 기능이 있어서, 데이터 주고싶으면 주고, 귀찬으면 안줘도 되요
+"""
 def add(a="데이터",b=" 안줬잔아"):
+    # 문자열 + 문자열은 문자열 이어 붙이기로 작동해요
     return a+b
 
-print(add(1,2))
+print(add())
 
