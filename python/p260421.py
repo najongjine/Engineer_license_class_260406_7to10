@@ -53,11 +53,22 @@ b=2
 #print(f"main a: {a}")
 #print(f"main b: {b}")
 
+"""
+파이썬은 scope 개념이 함수하고 class 에만 있어요
+"""
 def change(a=1):
     a="바뀜"
     return a
 a=1
 change(a)
+#print(a)
+
+def change2(a):
+    a[0]="바뀜"
+    return a
+a=[1,2]
+change2(a)
 print(a)
+
 
 
