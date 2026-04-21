@@ -31,5 +31,10 @@ for i in [1,2]:
 def add(a,b):
     return a+b
 
+#print(add(1,2)) #3
+
+def add(a="데이터",b=" 안줬잔아"):
+    return a+b
+
 print(add(1,2))
 
