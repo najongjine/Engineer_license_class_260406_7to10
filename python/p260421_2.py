@@ -46,15 +46,15 @@ class Child(Parent):
 
 child=Child()
 child.value="자식"
-print(child.value)
-print(child.c)
-child.show()
+#print(child.value)
+#print(child.c)
+#child.show()
 
 p=Parent()
 p.value="부모2"
-print(p.value)
-print(p.c)
-p.show()
+#print(p.value)
+#print(p.c)
+#p.show()
 
 #######class 를 list comprehension으로 생성하기#######
 class Person:
@@ -62,6 +62,11 @@ class Person:
         self.a=a
         self.name=b
         pass
+    def change(self,_p):
+        p.a+=10
+        pass
 
 p=[Person(i,"hi"+str(i)) for i in range(3)]
-print(p)
+#p=[Person(0,"hi1"),Person(1,"hi2"),Person(2,"hi3")]
+p[0].change(p[1])
+print(p[1].a)
