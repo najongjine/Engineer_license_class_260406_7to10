@@ -73,6 +73,10 @@ a=[1,2]
 change2(a)
 #print(a)
 
+"""
+java, python 자료결합도:
+숫자, 문자열, boolean
+"""
 def change(a):
     a="바뀜"
     return a
