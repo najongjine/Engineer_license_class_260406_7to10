@@ -63,7 +63,7 @@ class Person:
         self.name=b
         pass
     def change(self,_p):
-        p.a+=10
+        _p.a+=10
         pass
 
 p=[Person(i,"hi"+str(i)) for i in range(3)]
