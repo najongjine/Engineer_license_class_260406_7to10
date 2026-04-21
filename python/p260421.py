@@ -49,7 +49,15 @@ def swap(a,b):
     return a,b,3,45,6,7,8,9,896,2,545,4,
 a=1
 b=2
-print(swap(a,b))
-print(f"main a: {a}")
-print(f"main b: {b}")
+#print(swap(a,b))
+#print(f"main a: {a}")
+#print(f"main b: {b}")
+
+def change(a=1):
+    a="바뀜"
+    return a
+a=1
+change(a)
+print(a)
+
 
