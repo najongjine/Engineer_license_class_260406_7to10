@@ -82,3 +82,5 @@ print(square(4))   # 16
 nums = [1, 2, 3, 4]
 result = list(map(lambda x: x * 2, nums))
 print(result)   # [2, 4, 6, 8]
+
+dict1 = {'a': 1, 'b': 2, 'c': 3}
