@@ -63,11 +63,21 @@ a=1
 change(a)
 #print(a)
 
+"""
+자료결합도 빼고는 다 stamp 결합도
+"""
 def change2(a):
     a[0]="바뀜"
     return a
 a=[1,2]
 change2(a)
+#print(a)
+
+def change(a):
+    a="바뀜"
+    return a
+a="안바뀜"
+change(a)
 print(a)
 
 
