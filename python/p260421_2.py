@@ -9,16 +9,16 @@ class Person:
 # 객체 생성
 p1 = Person(0,"모모")
 p2=Person(1,"페페")
-print(f"p1" ,p1.c)
-print(f"p2" ,p2.c)
+#print(f"p1" ,p1.c)
+#print(f"p2" ,p2.c)
 p1.c="클래스 변수2"
-print(f"p1" ,p1.c)
-print(f"p2" ,p2.c)
+#print(f"p1" ,p1.c)
+#print(f"p2" ,p2.c)
 
 Person.c="클래스 변수3"
-print(f"Person.c=클래스 변수3" )
-print(f"p1" ,p1.c)
-print(f"p2" ,p2.c)
+#print(f"Person.c=클래스 변수3" )
+#print(f"p1" ,p1.c)
+#print(f"p2" ,p2.c)
 
 """
 파이썬의 클래스 변수는 자바의 static 속성과 많이 틀려요.
@@ -30,6 +30,7 @@ print(f"p2" ,p2.c)
 """
 
 class Parent:
+    c="부모 클래스 변수"
     def __init__(self):
         self.value="부모"
         pass
@@ -46,9 +47,21 @@ class Child(Parent):
 child=Child()
 child.value="자식"
 print(child.value)
+print(child.c)
 child.show()
 
 p=Parent()
 p.value="부모2"
 print(p.value)
+print(p.c)
 p.show()
+
+#######class 를 list comprehension으로 생성하기#######
+class Person:
+    def __init__(self,a,b):
+        self.a=a
+        self.name=b
+        pass
+
+p=[Person(i,"hi"+str(i)) for i in range(3)]
+print(p)
