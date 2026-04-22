@@ -12,5 +12,6 @@ https://wildojisan.tistory.com/149
 
 
 
-SELECT
-FROM departments;
+SELECT -- 2
+* -- 3
+FROM departments; -- 1
