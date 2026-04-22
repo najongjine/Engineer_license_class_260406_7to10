@@ -15,3 +15,9 @@ https://wildojisan.tistory.com/149
 SELECT -- 2
 * -- 3
 FROM departments; -- 1
+
+SELECT --3
+* --4
+FROM departments --1
+WHERE location = 'Seoul' --2
+;
