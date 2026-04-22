@@ -21,3 +21,22 @@ SELECT --3
 FROM departments --1
 WHERE location = 'Seoul' --2
 ;
+
+
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY,
+    post_id INT NOT NULL,
+    
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_comments_post
+        FOREIGN KEY (post_id)
+        REFERENCES 게시판(id)
+        ON DELETE CASCADE,
+);
+CONSTRAINT: 제약조건을 만들겠다
+fk_comments_post : 제약조건 이름. 아무렇게나 지으면 됨
+FOREIGN KEY (post_id): post_id컬럼이 외래키다
+REFERENCES 게시판(id): 게시판의 id컬럼을 참조한다
+ON DELETE CASCADE: 게시판의 id가 삭제되면 comments의 데이터도 같이 삭제된다.
