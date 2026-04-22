@@ -33,7 +33,7 @@ CREATE TABLE comments (
     CONSTRAINT fk_comments_post
         FOREIGN KEY (post_id)
         REFERENCES 게시판(id)
-        ON DELETE CASCADE,
+        ON DELETE CASCADE
 );
 CONSTRAINT: 제약조건을 만들겠다
 fk_comments_post : 제약조건 이름. 아무렇게나 지으면 됨
