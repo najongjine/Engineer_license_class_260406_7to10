@@ -6,3 +6,6 @@ https://wildojisan.tistory.com/127
 
 https://wildojisan.tistory.com/128
 - DDL
+
+https://wildojisan.tistory.com/149
+- DML
