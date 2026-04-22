@@ -9,3 +9,8 @@ https://wildojisan.tistory.com/128
 
 https://wildojisan.tistory.com/149
 - DML
+
+
+
+SELECT
+FROM departments;
