@@ -1,0 +1,12 @@
+SELECT 
+emp_name
+FROM Employees e
+WHERE EXISTS (SELECT 1
+              FROM Projects p
+              WHERE p.dept_id = e.department_id);
+
+EXIST는 존재하니? 를 물어보는 쿼리.
+
+그래서 메인 테이블의 데이터가 EXIST 서브쿼리 
+조건을 만족하면, 그 메인 테이블에 있는 데이터는
+보여줘도 된다.
