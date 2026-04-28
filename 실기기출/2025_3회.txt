@@ -1,0 +1,133 @@
+1번
+폴더 - 패키지
+
+2번 
+각각의 조건식이 True와 False 두 가지 경우를 모두 한 번 이상 만족하도록
+테스트 케이스를 설계해야 한다.
+
+그렇다고 해서 전체 결정식(Decision Expression) 의 결과(True/False)가
+모두 수행된다고 보장하지는 않는다.
+
+화이트박스 테스트 커버리지에서 제일 꾸진게
+조건(condition) 커버레이지다
+
+6번
+#include <stdio.h>
+
+int main(void) {
+    // c언어는 문자열 끝에 \0 를 컴파일때 자동으로 넣어요
+    char str[] = "REPUBLICOFKOREA";
+    int a = 0; // 15
+    
+
+    // c언어에서 문자열 길기 구하는 코드.
+    while (str[a] != '\0')
+        ++a;
+    // str[13]
+    putchar(str[a - 2]);
+    return 0;
+}
+
+7번
+#include <stdio.h>
+
+struct Node {
+    struct Node* next;
+    unsigned int x;
+};
+
+int main() {
+    struct Node t1 = { 0, 5u };
+    struct Node t2 = { 0, 7u };
+    struct Node t3 = { 0, 11u };
+
+    t3.next = &t2;
+    t2.next = &t1;
+
+    struct Node* curr = &t3;
+    int sum = 0; // 125
+
+    while (curr) {
+        sum = sum * 3 + curr->x;
+        curr = curr->next;
+    }
+    // sum = (125 ^ 42) + 100 -> (1111101 ^ 101010)    ^ := xor 연산
+    sum = (sum ^ 42u) + 100u;
+
+    printf("%u\n", sum);
+}
+
+9번
+data = [
+    [3, 5, 2, 4, 1], # 0번째 행
+    [4, 5, 1], # 1번째 행
+    [4, 4, 1, 5, 4], # 2번째 행
+    [4, 5] # 3번째 행
+]
+ 
+result = {}
+ #    1      [4, 5, 1]
+for index, lis in enumerate(data):
+    list_sum = sum(lis) # 10
+    list_len = len(lis) # 3
+ 
+    # result[0] = (15, 5)
+    # result[1] = (10, 3)
+    # result[2] = (18, 5)
+    # result[3] = (9, 2)
+    result[index] = (list_sum, list_len)
+ 
+print(result)
+
+13번
+
+소셜 로그인(구글 로그인, 카카오 로그인으로 네이버 로그인도 하고, 쿠팡 로그인도 하고, 타 사이트 로그인 할수 있는거)
+OAUTH
+
+SSO 는 네이버 로그인으로 네이버 제품밖에 못쓴다
+
+14번
+R%S 관계대수
+
+서로 비슷한거 매칭 시키고, S 테이블에 있는 칼럼 버리기
+
+
+17번
+package test2604;
+
+/*
+ * enum 이라는 기능이에요
+ * */
+enum Tri {
+	// 요거 전체가 Tri 의 값이에요
+    A("A"), B("AB"), C("ABC");
+	// A 는 이름 "A" 가 실제값, C는 이름 "ABC"가 실제 값
+	// 실제 값은 code 로 라는 놈으로 접근
+    private String code;
+ 
+    Tri(String code) {
+        this.code = code;
+    }
+ 
+    public String code() {
+        return code;
+    }
+}
+
+public class Test2604 {
+	public static void main(String[] args) {
+		//  Tri.A.name() == A의 이름. 즉 A
+		// Tri.values() == [A("A"), B("AB"), C("ABC")]
+		Tri t = Tri.values()[Tri.A.name().length()];
+        System.out.print(t.code());
+	}
+}
+
+
+18번
+
+RBAC = 역활, role
+
+MAC = 군대, 등급, 기밀
+
+DAC= 소유자, owner

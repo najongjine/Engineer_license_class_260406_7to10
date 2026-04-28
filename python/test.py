@@ -1,16 +1,20 @@
-def f(a): # a= [1,2,3,4]
-    # [[1], [2], [3], [4]]
-    m = [[x] for x in a]
-    
-    b = m[:] # [[1], [2,1], [3,2,1], [4,3,2,1]]
-    # i 가 0~2 까지 반복
-    for i in range(len(b) - 1): # range(3)
-        # b[2+1] += b[2] -> b[3]= [4] + [3,2,1]
-        b[i+1] += b[i]
-    print(f"forloop 이후의 b:",b)
-    print(f"forloop 이후의 m:",m)
-    # 길이([4,3,2,1])
-    # sum(1, 2, 3, 4)
-    return sum(len(x) for x in m)
-
-print(f([1, 2, 3, 4]))
+data = [
+    [3, 5, 2, 4, 1], # 0번째 행
+    [4, 5, 1], # 1번째 행
+    [4, 4, 1, 5, 4], # 2번째 행
+    [4, 5] # 3번째 행
+]
+ 
+result = {}
+ #    1      [4, 5, 1]
+for index, lis in enumerate(data):
+    list_sum = sum(lis) # 10
+    list_len = len(lis) # 3
+ 
+    # result[0] = (15, 5)
+    # result[1] = (10, 3)
+    # result[2] = (18, 5)
+    # result[3] = (9, 2)
+    result[index] = (list_sum, list_len)
+ 
+print(result)
