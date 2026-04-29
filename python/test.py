@@ -1,20 +1,18 @@
-data = [
-    [3, 5, 2, 4, 1], # 0번째 행
-    [4, 5, 1], # 1번째 행
-    [4, 4, 1, 5, 4], # 2번째 행
-    [4, 5] # 3번째 행
-]
- 
-result = {}
- #    1      [4, 5, 1]
-for index, lis in enumerate(data):
-    list_sum = sum(lis) # 10
-    list_len = len(lis) # 3
- 
-    # result[0] = (15, 5)
-    # result[1] = (10, 3)
-    # result[2] = (18, 5)
-    # result[3] = (9, 2)
-    result[index] = (list_sum, list_len)
- 
-print(result)
+lst = [1,2,3] # [99,2,3]
+"""
+dst={
+1:2
+2:7
+3:6
+}
+"""
+dst = {i : i* 2 for i in lst}
+# s={2,4,6,99}
+s = set(dst.values())
+lst[0] = 99 
+dst[2]=7
+s.add(99)
+"""
+{2,4,6,99} & {2,4,7} -> len({2,4}) = 2
+"""
+print(len(s & set(dst.values())))
