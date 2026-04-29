@@ -278,3 +278,8 @@ int main() {
 
     return 0;
 }
+
+
+19번
+SYN Flooding:
+ 수많은 SYN 패킷을 서버에 전송한 뒤 마지막 ACK를 고의로 보내지 않아
