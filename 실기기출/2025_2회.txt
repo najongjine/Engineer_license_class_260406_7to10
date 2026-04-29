@@ -94,3 +94,101 @@ public class Test2604 {
         System.out.print(run(f) + run((int n) -> n + 9));
 	}
 }
+
+
+10번
+package test2604;
+
+public class Test2604 {
+	public static class Parent {
+        // 요놈은 upcasting 할시, override 일어남
+        public int x(int i) { return i + 2; }
+        // static 함수는 override 안일어남. 왜냐면 static 영역은 신의 영역이라서
+        public static String id() { return "P";} 
+    }
+ 
+    public static class Child extends Parent {
+        public int x(int i) { return i + 3; }
+        public String x(String s) { return s + "R"; }
+        public static String id() { return "C"; }
+    }
+	
+	public static void main(String[] args) {
+		Parent ref = new Child();
+		//                  5             P
+        System.out.println(ref.x(2) + ref.id());
+	}
+}
+
+
+
+## 13. 라운드로빈 평균 대기시간
+
+### 정답
+
+**11.75ms**
+
+### 해설
+
+타임 퀀텀은 4ms입니다. 도착 시간과 실행 시간은 다음과 같습니다.
+
+| 프로세스 | 도착 시간 | 실행 시간 |
+|---|---:|---:|
+| P1 | 0 | 8 |
+| P2 | 1 | 4 |
+| P3 | 2 | 9 |
+| P4 | 3 | 5 |
+
+라운드로빈 실행 순서를 간트 차트로 정리하면 다음과 같습니다.
+
+```text
+0~4   P1  (남은 시간 4)
+4~8   P2  (완료)
+8~12  P3  (남은 시간 5)
+12~16 P4  (남은 시간 1)
+16~20 P1  (완료)
+20~24 P3  (남은 시간 1)
+24~25 P4  (완료)
+25~26 P3  (완료)
+```
+
+각 프로세스의 완료 시간은 다음과 같습니다.
+
+```text
+P1 완료 시간 = 20
+P2 완료 시간 = 8
+P3 완료 시간 = 26
+P4 완료 시간 = 25
+```
+
+대기 시간은 다음 공식으로 구합니다.
+
+```text
+대기 시간 = 완료 시간 - 도착 시간 - 실행 시간
+```
+
+각 프로세스의 대기 시간은 다음과 같습니다.
+
+```text
+P1 = 20 - 0 - 8 = 12
+P2 = 8 - 1 - 4 = 3
+P3 = 26 - 2 - 9 = 15
+P4 = 25 - 3 - 5 = 17
+```
+
+평균 대기 시간은 다음과 같습니다.
+
+```text
+(12 + 3 + 15 + 17) / 4 = 47 / 4 = 11.75
+```
+
+따라서 평균 대기시간은 `11.75ms`입니다.
+
+### 시험용 포인트
+
+- RR은 타임 퀀텀만큼 순서대로 실행
+- 완료 시간 먼저 구하기
+- 대기 시간 = 완료 시간 - 도착 시간 - 실행 시간
+- 컨텍스트 스위칭 시간은 무시
+
+---
