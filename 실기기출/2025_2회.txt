@@ -49,3 +49,48 @@ C클래스, 4개의 회사에 나눠줬고,
 132 요놈은  128~191 회사에 속한다
 128은 네트워크 주소로 쓰이고, 191은 브로드캐스트로 쓰인다.
 그래서 나은 호스트 수는 62개가 된다
+
+
+7번
+Proxy:
+어떤 객체에 대한 접근을 제어, 추가적인 기능을 부여, 대리 객체
+실제 객체를 감추어 정보은닉을 강화
+
+8번
+Ajax:
+웹페이지 javascript, 비동기적으로 갱신, 동적인 기능들을 가능
+
+
+
+9번
+
+package test2604;
+
+public class Test2604 {
+	static interface F {
+        int apply(int x) throws Exception;
+    }
+ 
+    public static int run(F f) {// 람다 함수 통째로 받고
+        try {
+            // 람다 함수에 3 넣고 실행
+            return f.apply(3);
+        } catch (Exception e) {
+            return 7;
+        }
+    }
+    
+	
+	public static void main(String[] args) {
+        // 람다. 그냥 여기에 매개변수 3 넣고 돌리면 됨.
+		F f = (x) -> {
+            if (x > 2) {
+                throw new Exception();
+            }
+            return x * 2;
+        };
+ 
+        //                              이것도 람다. 더 짧게 쓴 버전. 이것도 매개변수 3 넣고 돌리면 됨
+        System.out.print(run(f) + run((int n) -> n + 9));
+	}
+}
