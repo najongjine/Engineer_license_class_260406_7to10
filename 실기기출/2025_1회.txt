@@ -22,3 +22,12 @@ CRC- 다항식
 6번
 ARP - IP to MAC
 RARP - MAC to IP
+
+
+8번
+degree - 속성의 총 갯수
+cardinality(카디널리티) - 튜플의 총 갯수
+foreign key(외래키) - 참조 
+domain - type,유형
+
+9번
