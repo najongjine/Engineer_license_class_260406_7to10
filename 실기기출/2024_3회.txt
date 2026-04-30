@@ -1,0 +1,89 @@
+1번
+package test2604;
+
+public class Test2604 {
+	static String[] s = new String[3];
+	static void func(String[]s, int size){
+	    for(int i=1; i<size; i++){
+	    	// equals는 변수가 가진 주소값이 아닌, 원산지의 진짜 원소값 비교
+	      if(s[i-1].equals(s[i])){
+	        System.out.print("O");
+	      }else{
+	        System.out.print("N");
+	      }
+	    }
+	      for (String m : s){
+	        System.out.print(m);
+	      }
+	    }
+	public static void main(String[] args) {
+		s[0] = "A";
+	    s[1] = "A";
+	    s[2] = new String("A");
+	 
+	    func(s, 3);
+	}
+}
+
+
+2번
+def func(lst):
+    #               6//2 == 3 -> 0,1,2
+    for i in range(len(lst) //2):
+        """
+        lst[1], lst[2] = lst[2], lst[1]
+        """
+        lst[i], lst[-i-1] = lst[-i-1], lst[i]
+# [6,5,4,3,2,1] 
+lst = [1,2,3,4,5,6] 
+func(lst)
+#          12      -        9
+print(sum(lst[::2]) - sum(lst[1::2]))
+
+
+## 4. LRU 페이지 부재
+
+페이지 참조 순서:
+
+```text
+7 0 1 2 0 3 0 4 2 3 0 3 2 1 2 0 1 7 0 1
+```
+
+프레임 수는 3개이다. LRU는 가장 오랫동안 사용하지 않은 페이지를 교체한다.
+
+| 순서 | 참조 | 프레임 상태 | 부재 여부 |
+| ---: | ---: | ----------- | --------- |
+|    1 |    7 | 7           | O         |
+|    2 |    0 | 7 0         | O         |
+|    3 |    1 | 7 0 1       | O         |
+|    4 |    2 | 2 0 1       | O         |
+|    5 |    0 | 2 0 1       | X         |
+|    6 |    3 | 2 0 3       | O         |
+|    7 |    0 | 2 0 3       | X         |
+|    8 |    4 | 4 0 3       | O         |
+|    9 |    2 | 4 0 2       | O         |
+|   10 |    3 | 4 3 2       | O         |
+|   11 |    0 | 0 3 2       | O         |
+|   12 |    3 | 0 3 2       | X         |
+|   13 |    2 | 0 3 2       | X         |
+|   14 |    1 | 1 3 2       | O         |
+|   15 |    2 | 1 3 2       | X         |
+|   16 |    0 | 1 0 2       | O         |
+|   17 |    1 | 1 0 2       | X         |
+|   18 |    7 | 1 0 7       | O         |
+|   19 |    0 | 1 0 7       | X         |
+|   20 |    1 | 1 0 7       | X         |
+
+페이지 부재 횟수는 `12`이다.
+
+정답:
+
+```text
+12
+```
+
+핵심 키워드:
+
+- LRU → Least Recently Used
+- 가장 오래 안 쓴 페이지를 버린다.
+- 이미 프레임에 있으면 페이지 부재가 아니다.

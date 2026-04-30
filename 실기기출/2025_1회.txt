@@ -164,3 +164,55 @@ public class Test2604 {
         System.out.println(Parent.total);
 	}
 }
+
+
+16번
+package test2604;
+
+public class Test2604 {
+	//                            0       2
+	static int func(int[] a, int st, int end) {
+        if (st >= end) return 0;
+        int mid = (st + end) / 2; // 1
+        /*
+         * a[mid] + Math.max(func(a, st, mid), func(a, mid + 1, end))
+         * 8 + Math.max(func(a, 0, 2), func(a, 3, 4))
+         * */
+        return a[mid] + Math.max(func(a, st, mid), func(a, mid + 1, end));
+    } 
+	public static void main(String[] args) {
+		int[] data = {3, 5, 8, 12, 17};
+        System.out.println(func(data, 0, data.length - 1));
+	}
+}
+
+
+19번
+#include <stdio.h>
+
+typedef struct student {
+    char* name;
+    int score[3];
+} Student;
+//           0xA0
+int dec(int enc) {
+    // 0xA0 & 0xA5 -> 2진수로 바꾼다음에 & 비트 연산 해라
+    return enc & 0xA5;
+}
+
+int sum(Student* p) {
+    //               0xA0
+    return dec(p->score[0]) + dec(p->score[1]) + dec(p->score[2]);
+}
+
+int main() {
+    Student s[2] = { "Kim", {0xA0, 0xA5, 0xDB}, "Lee", {0xA0, 0xED, 0x81} };
+    Student* p = s;
+    int result = 0;
+
+    for (int i = 0; i < 2; i++) {
+        result += sum(&s[i]);
+    }
+    printf("%d", result);
+    return 0;
+}
