@@ -84,3 +84,62 @@ AES:
 10번
 Iterator:
 반복, 컬렉션
+
+
+13번
+#include <stdio.h>
+
+int main() {
+    int arr[3][3] = 
+      { 1, 2, 3, 
+        4, 5, 6, 
+        7, 8, 9 };
+    /*
+    * {z3, z6}
+    */
+    int* parr[2] = { arr[1], arr[2] };
+    //printf("arr: %p \n", arr);
+    //printf("&arr[0]: %p \n", &arr[0]);
+    //              8              9              4
+    printf("%d", parr[1][1] + *(parr[1] + 2) + **parr);
+
+    return 0;
+}
+
+
+15번
+#include <stdio.h>
+#include <string.h>
+//  d = "teststring",  s = "first"
+void sumFn(char* d, const char* s) {
+    /*
+    * d 라는 연속된 문자열 배열 공간에, s가 가지고 있던
+    * 문자열을 덮어 써 버렸어요.
+    * first\0ring
+    */
+    while (*s) {
+        *d = *s;
+        d++;
+        s++;
+    }
+    *d = '\0';
+}
+
+int main() {
+    const char* str1 = "first";
+    char str2[50] = "teststring";
+    int result = 0;
+    sumFn(str2, str1);
+    // i 0~4, 5 에서 빠져나가요
+    for (int i = 0; str2[i] != '\0'; i++) {
+        result += i;
+    }
+    printf("%d", result);
+
+    return 0;
+}
+
+
+16번
+제어 결합도:
+제어하기위해, 흐름제어, 제어, 통제
