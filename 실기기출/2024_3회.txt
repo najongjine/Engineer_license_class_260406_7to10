@@ -194,3 +194,46 @@ int main() {
 VPN:
 공용 네트워크를 통해 사설 네트워크 처럼
 IPsec 을 이용해서 만든다
+
+
+19번
+package test2604;
+//                       Integer 0
+public static class Collection<T>{
+    T value; // Integer value=0;
+ 
+    public Collection(T t){ // t=0
+        value = t;
+    }
+ 
+    public void print(){
+    	//                   0
+       new Printer().print(value);
+    }
+ 
+   class Printer{
+	   // 사람의 상식수준에선 얘가 실행되야 맞지만...
+      void print(Integer a){
+        System.out.print("A" + a);
+      }
+      // 자바 만드신분은 Object 매개변수 overloading 이 있으면 컴파일때 Object 매개변수 함수가 실행되게 했다
+      void print(Object a){
+        System.out.print("B" + a);
+      } 
+      void print(Number a){
+        System.out.print("C" + a);
+      }
+   }
+ }
+public class Test2604 {
+	public static void main(String[] args) {
+		new Collection<>(0).print();
+	}
+}
+
+
+20번
+Ad-Hoc:
+서버 필요없이 네트워크를 기기들기리 구성할수 있다
+무선 통신, 노드들이 직접 연결
+긴급 구조, 긴급 회의, 군사적인 상황
