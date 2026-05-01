@@ -1,12 +1,14 @@
-def func(lst):
-    #               6//2 == 3 -> 0,1,2
-    for i in range(len(lst) //2):
-        """
-        lst[1], lst[2] = lst[2], lst[1]
-        """
-        lst[i], lst[-i-1] = lst[-i-1], lst[i]
-# [6,5,4,3,2,1] 
-lst = [1,2,3,4,5,6] 
-func(lst)
-#          12      -        9
-print(sum(lst[::2]) - sum(lst[1::2]))
+def func(value): # 100.0
+    if type(value) == type(100):
+        return 100
+    elif type(value) == type(""):
+        return len(value) 
+    else:
+        return 20
+ 
+ 
+a = '100.0'
+b = 100.0
+c = (100, 200)
+#       5         20       20
+print(func(a) + func(b) + func(c))

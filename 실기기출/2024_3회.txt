@@ -87,3 +87,110 @@ print(sum(lst[::2]) - sum(lst[1::2]))
 - LRU → Least Recently Used
 - 가장 오래 안 쓴 페이지를 버린다.
 - 이미 프레임에 있으면 페이지 부재가 아니다.
+
+
+5번
+스머프
+ICMP
+여러 호스트가 특정 대상에게 다량의 ICMP Echo Reply 를 보내게 하여 서비스거부(DoS)를 유발
+
+
+7번
+#include <stdio.h>
+
+int func() {
+    // static 있습니다. static 영역에 계속 남아있음. 안사라짐.
+    static int x = 0; // 8
+    x += 2;
+    return x;
+}
+
+int main() {
+    int x = 1; // 5
+    int sum = 0; // 20
+    // i 0 ~ 3, 4 에서 빠져나옴
+    for (int i = 0; i < 4; i++) { // 4
+        x++; // main 에 있는 x 임
+        sum += func(); 
+    }
+    printf("%d", sum);
+
+    return 0;
+}
+
+8번
+개체무결성:
+기본키(PK)는 NULL 이나 중복된 값을 가질수 없다.
+
+
+11번
+package test2604;
+
+class Base{
+  int x = 3;
+ 
+  int getX(){ // overrride
+     return x * 2; 
+  }
+}
+ 
+class Derivate extends Base{
+  int x = 7;
+  
+  int getX(){
+     return x * 3;
+  }
+}
+public class Test2604 {
+	public static void main(String[] args) {
+		 Base a =  new Derivate();
+	    Derivate b = new Derivate();
+	    //                  21      3        21      7
+	    System.out.print(a.getX() + a.x + b.getX() + b.x);
+	}
+}
+
+
+13번
+문장 커버리지: 모든 문장을 최소한 한 번씩 실행
+결정(분기) 커버리지: 모든 분기 최소한 한 번씩 실행(if문 결과 T, F 해봄)
+조건: 조건 내의 각 개별 조건(변수)이 참과 거짓으로 평가되는 경우를 모두 테스트.
+     하지만 결과를 T,F 둘다 해보지 못하는 치명적 단점이 있음. 제일 꾸짐.
+
+
+15번
+외래키 : 참조
+후보키 : 각 행을 유일하게 식별할 수 있는 최소한의 속성들의 집합
+대체키 : 후보 키 중에서 선정된 기본 키를 제외한 나머지 후보 키
+슈퍼키 : 제일 꾸진놈. 각 행을 유일하게 식별할 수 있는 속성들의 집합. 최소성이 없음.
+
+
+16번
+#include <stdio.h>
+//{3 2 1 4 4}
+void func(int** arr, int size) {
+    for (int i = 0; i < size; i++) { // 4
+      //*(H4) = (9) % 5;
+        *(*arr + i) = (*(*arr + i) + i) % size;
+      //arr[0]     =   arr[0] + 0 % 5 
+    }
+}
+
+int main() {
+    int arr[] = { 3,1, 4, 1, 5 }; //{3 2 1 4 4}
+    int* p = arr;
+    int** pp = &p;
+    int num = 6;
+
+    func(pp, 5);
+    num = arr[2]; // 1
+    printf("%d", num);
+
+    return 0;
+}
+
+
+17번
+VPN:
+공용 네트워크를 통해 사설 네트워크 처럼
+IPsec 을 이용해서 만든다
