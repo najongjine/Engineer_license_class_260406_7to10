@@ -143,3 +143,45 @@ int main() {
 16번
 제어 결합도:
 제어하기위해, 흐름제어, 제어, 통제
+
+
+18번
+#include <stdio.h>
+// 자료결합도. 자리바꾸기 해봤다 main scope에 있는 원본 데이터 변형 안됨
+void swap(int a, int b) {
+    int t = a;
+    a = b;
+    b = t;
+}
+
+int main() {
+
+    int a = 11;
+    int b = 19; // 24
+    swap(a, b);
+
+    switch (a) {
+    case 1:
+        b += 1;
+    case 11: // 브레이크 없으니깐 밑에꺼 실행
+        b += 2;
+    default: //
+        b += 3;
+        break;
+    }
+    // 11 - 24
+    printf("%d", a - b);
+}
+
+
+20번
+package test2604;
+
+public class Test2604 {
+	public static void main(String[] args) {
+		String str = "ITISTESTSTRING";
+		//[I,IS,ES,S,RING]
+        String[] result = str.split("T");
+        System.out.print(result[3]);
+	}
+}
