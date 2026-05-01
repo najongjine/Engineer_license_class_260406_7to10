@@ -1,14 +1,19 @@
-def func(value): # 100.0
-    if type(value) == type(100):
-        return 100
-    elif type(value) == type(""):
-        return len(value) 
-    else:
-        return 20
+"""
+x= "abdcabcabca"  . 11
+y= "ca"
+"""
+def fnCalculation(x,y):
+    result = 0; # 1
+    for i in range(len(x)): # 0 ~ 10, 2
+     #      x[2:2+2]= dc
+     temp = x[i:i+len(y)] 
+     if temp == y: # dc == ab
+       result += 1;
+    return result
  
- 
-a = '100.0'
-b = 100.0
-c = (100, 200)
-#       5         20       20
-print(func(a) + func(b) + func(c))
+a = "abdcabcabca"
+p1 = "ab";
+p2 = "ca";
+#               ab3ca3
+out = f"ab{fnCalculation(a,p1)}ca{fnCalculation(a,p2)}"
+print(out)

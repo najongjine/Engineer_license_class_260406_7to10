@@ -1,0 +1,76 @@
+1번
+package test2604;
+
+public class Test2604 {
+	// stamp 결합도. 주소 받아요
+	public static void check(int[] a, int[] b) {
+		// 내용물 비교가 아니라, 주소비교
+	    if (a==b) {
+	        System.out.print("O");
+	    }else{
+	        System.out.print("N");
+	    }
+	    
+	}
+	public static void main(String[] args) {
+		// new 들어가면 무조건 힙영역에 새로운 메모리 공간 할당해요.
+		int[] a = new int[]{1, 2, 3, 4};
+		// 내용물은 같겠지만, 힙영역에 할당된 주소는 달라요
+        int[] b = new int[]{1, 2, 3, 4};
+        int[] c = new int[]{1, 2, 3};
+        
+        check(a, b);
+        check(a, c); 
+        check(b, c); 
+	}
+}
+
+
+2번
+반정규화:
+일부러 데이터를 중복시켜, 
+ 성능을 향상시키기 위해서
+
+
+ 5번
+ VPN 과 IPSec 은 항상 따라 다녀요
+
+
+
+ 6번
+ """
+x= "abdcabcabca"  . 11
+y= "ca"
+"""
+def fnCalculation(x,y):
+    result = 0; # 1
+    for i in range(len(x)): # 0 ~ 10, 2
+     #      x[2:2+2]= dc
+     temp = x[i:i+len(y)] 
+     if temp == y: # dc == ab
+       result += 1;
+    return result
+ 
+a = "abdcabcabca"
+p1 = "ab";
+p2 = "ca";
+#               ab3ca3
+out = f"ab{fnCalculation(a,p1)}ca{fnCalculation(a,p2)}"
+print(out)
+
+
+
+7번
+AES:
+대칭키, 미국, DES를 대체하기 위해 생성되었다
+
+
+8번
+가상회선:
+연결형 
+롤 같이 연결 먼저 다 맺어야함. 로딩김.
+
+데이터그램:
+비연결형 
+연결 안맺고 그냥 네트워크에 데이터 던짐.
+카톡같음
